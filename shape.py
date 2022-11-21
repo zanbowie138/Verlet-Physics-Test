@@ -6,8 +6,7 @@ class Shape():
         self.color = color
         self.pos_current = pos
         self.size = size
-        #self.pos_old = pos
-        self.pos_old = utils.sub(pos,[0,10])
+        self.pos_old = pos
         self.acceleration = [0.0,0.0]
 
 
@@ -28,6 +27,7 @@ class Shape():
         pass
     
     def accelerate(self, acc):
+        #Adds acceleration
         self.acceleration = utils.add(self.acceleration,acc)
 
     def getPositionX(self):
@@ -35,7 +35,9 @@ class Shape():
 
     def getPositionY(self):
         return int(self.pos_current[1])
+
     def equals(self, other):
+        #Compares this shape's id to other shape's id
         if (self.id == other.id):
             return True
         else:
