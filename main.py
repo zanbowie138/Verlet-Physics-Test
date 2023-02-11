@@ -52,7 +52,7 @@ while gameOn:
     #Spawns circles that are randomly colored
     if len(circles) < SPHERE_AMOUNT and update_count % RATE == 0:
         color = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
-        circles.append(Circle(update_count,[300.0,200.0],10, color))
+        circles.append(Circle(update_count,[300.0,200.0],SPHERE_SIZE, color))
 
     #Create background
     screen.fill((181,181,181))

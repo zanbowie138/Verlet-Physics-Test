@@ -25,7 +25,7 @@ def resolve_collisions(sph_arr, circle):
         #Distance between this circle and circle in array
         distance = utils.get_distance(circle.pos_current, other.pos_current)
 
-        #If distance between two circles is less than zero and not itself
+        #If distance between two circles is less than zero and it is not comparing to itself
         if distance < circle.size + other.size and not circle.equals(other):
             collision_axis = utils.get_unit_vec(circle.pos_current, other.pos_current)
 
